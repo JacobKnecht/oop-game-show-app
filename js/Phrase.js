@@ -51,6 +51,7 @@
     * Checks for the player's chosen letter in the displayed phrase
     * @function
     * @param {string} letter - The player's chosen letter
+    * @returns {Boolean} - Whether the phrase contains the chosen letter   
     */
    checkLetter(letter) {
      for(let char of this.phrase) {
