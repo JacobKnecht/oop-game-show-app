@@ -1,4 +1,4 @@
-//Game class declaration
+ //Game class declaration
  class Game {
    constructor() {
      this.missed = 0;
