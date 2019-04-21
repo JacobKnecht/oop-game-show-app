@@ -1,4 +1,8 @@
- /**Phrase class declaration */
+ /**
+  * Phrase class declaration
+  * @class
+  * @name Phrase
+  */
  class Phrase {
    /**
     * Represents a phrase
@@ -6,13 +10,17 @@
     * @param {string} phrase - The phrase to be displayed in-game
     */
    constructor(phrase) {
-     /** Ensure phrase is case-insensitive */
+     /**
+      * Phrase class property declarations
+      * @property {string} Phrase.phrase - The phrase's text (lowercase format)
+      */
      this.phrase = phrase.toLowerCase();
    }
 
    /**
     * Generates the HTML to display the phrase used in-game
-    * @function
+    * @method
+    * @name addPhraseToDisplay
     */
    addPhraseToDisplay() {
      const phraseDiv = document.querySelector('#phrase ul');
@@ -34,7 +42,7 @@
             * initial text value of the '-' character; this prevents the player
             * from cheating by dragging their mouse over the li elements and
             * highlighting the characters, which should be hidden
-            * Note: initializing the text value with white space or leaving the
+            * Note: Initializing the text value with white space or leaving the
             * value uninitialized causes the li elements to shift on the
             * display when the user selects a correct character
             */
@@ -49,7 +57,8 @@
 
    /**
     * Checks for the player's chosen letter in the displayed phrase
-    * @function
+    * @method
+    * @name checkLetter
     * @param {string} letter - The player's chosen letter
     * @returns {Boolean} - Whether the phrase contains the chosen letter
     */
@@ -64,7 +73,8 @@
 
    /**
     * Reveals correctly matched letter in the displayed phrase
-    * @function
+    * @method
+    * @name showMatchedLetter
     * @param {string} letter - A correctly matched letter
     */
    showMatchedLetter(letter) {
