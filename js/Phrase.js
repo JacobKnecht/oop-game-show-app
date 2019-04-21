@@ -6,7 +6,7 @@
     * @param {string} phrase - The phrase to be displayed in-game
     */
    constructor(phrase) {
-     /** ensure phrase is case-insensitive */
+     /** Ensure phrase is case-insensitive */
      this.phrase = phrase.toLowerCase();
    }
 
@@ -16,22 +16,22 @@
     */
    addPhraseToDisplay() {
      const phraseDiv = document.querySelector('#phrase ul');
-     this.phrase = this.phrase.trim(); /** cleans the phrase formatting */
-     /** phrases should only contain letters and spaces */
+     this.phrase = this.phrase.trim(); /** Cleans the phrase's formatting */
+     /** Phrases should only contain letters and spaces */
      const regex = /^[a-z ]+$/;
      if(regex.test(this.phrase)) {
        for(let char of this.phrase) {
-         if(char === ' ') { /** if the character is a space */
+         if(char === ' ') { /** If the character is a space */
            let space = document.createElement('li');
            space.className = 'space';
            space.textContent = ' ';
            phraseDiv.append(space);
-         } else { /** if the character is a letter */
+         } else { /** If the character is a letter */
            let letter = document.createElement('li');
            letter.classList.add('hide', 'letter', char);
            /**
             * The li elements containing the phrase's letters are given the
-            * initial text value of the '-' character; this prevents the user
+            * initial text value of the '-' character; this prevents the player
             * from cheating by dragging their mouse over the li elements and
             * highlighting the characters, which should be hidden
             * Note: initializing the text value with white space or leaving the
@@ -42,7 +42,7 @@
            phraseDiv.append(letter);
          }
        }
-     } else { /** phrase contains one or more non-letter/non-space characters */
+     } else { /** Phrase contains one or more non-letter/non-space characters */
        alert(this.phrase + ' is not a valid phrase');
      }
    }
@@ -51,7 +51,7 @@
     * Checks for the player's chosen letter in the displayed phrase
     * @function
     * @param {string} letter - The player's chosen letter
-    * @returns {Boolean} - Whether the phrase contains the chosen letter   
+    * @returns {Boolean} - Whether the phrase contains the chosen letter
     */
    checkLetter(letter) {
      for(let char of this.phrase) {
@@ -70,8 +70,9 @@
    showMatchedLetter(letter) {
      const matches = document.querySelectorAll('.' + letter);
      for(let match of matches) {
-       /** set text value of the li element when it is correctly guessed to
-        * prevent users from cheating by generating content early
+       /**
+        * Set text value of the li element when it is correctly guessed to
+        * prevent players from cheating by generating content early
         */
        match.textContent = letter;
        match.classList.remove('hide');
