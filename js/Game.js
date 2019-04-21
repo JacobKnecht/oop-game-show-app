@@ -40,7 +40,7 @@
     * Generates and returns a random phrase from the list of stored phrases
     * @method
     * @name getRandomPhrase
-    * @returns {Phrase} - Randomly selected phrase object
+    * @returns {Object} - Randomly selected phrase object
     */
    getRandomPhrase() {
      const numOfPhrases = 5;
@@ -55,7 +55,7 @@
     * has won the game (ending the game if they won)
     * @method
     * @name handleInteraction
-    * @param {object} key - The HTML button that the player has clicked
+    * @param {Object} key - The HTML button that the player has clicked
     */
    handleInteraction(key) {
      console.log(typeof(key));
