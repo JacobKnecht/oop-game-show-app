@@ -6,10 +6,11 @@
    game = new Game();
    //start the game
    game.startGame();
-   //Onscreen keyboard buttons click event listener
-   document.querySelector('#qwerty').addEventListener('click', function(e) {
-     if(e.target.className === 'key') {
-       game.handleInteraction(e.target);
-     }
-   });
+ });
+
+ //Onscreen keyboard buttons click event listener
+ document.querySelector('#qwerty').addEventListener('click', function(e) {
+   if(e.target.className === 'key') {
+     game.handleInteraction(e.target);
+   }
  });
