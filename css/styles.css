@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background: #000; /*changed*/
 }
 
 li, ol, ul {
@@ -86,7 +87,7 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #f2534b; /*changed*/
 }
 
 
@@ -100,24 +101,22 @@ button {
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);
-  border-radius: 5px;
+  border-radius: 50px; /*changed*/
 }
 
 .space {
   width: 15px;
 }
 
-
-
 .show {
-  color: #fff;
-  background-color: #4ac0d5;
+  color: #000; /*changed*/
+  background-color: #4bf26b; /*changed*/
   font-size: 20px;
   height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
   margin-right: 2px;
-  border-radius: 5px;
+  border-radius: 50px; /*changed*/
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
 }
@@ -125,21 +124,26 @@ button {
 
 /* Keyboard */
 
+.key { /*changed*/
+  border-radius: 50px;
+}
+
 .keyrow {
   display: flex;
   justify-content: center;
 }
 
 .chosen {
-  background: #3a3f58;
-  border-radius: 5px;
+  background: #f27d4b; /*changed*/
+  border-radius: 50px; /*changed*/
   font-size: var(--font-size-medium);
-  color: #FFFFFF;
+  color: #000; /*changed*/
 }
 
 .wrong {
-  background: #f7a964;
-  color: #FFFFFF;
+  background: #f24b8e; /*changed*/
+  color: #000; /*changed*/
+  border-radius: 50px; /*changed*/
 }
 
 .btn__reset {
@@ -176,11 +180,11 @@ button {
 }
 
 .title {
-  color: #FFF;
+  color: #000; /*changed*/
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #f2534b; /*changed*/
 }
 
 .start a {
@@ -188,7 +192,7 @@ button {
 }
 
 .win {
-  background-color: var(--color-win);
+  background-color: #f2a74b; /*changed*/
 }
 
 .win a {
@@ -196,7 +200,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #5c4bf2; /*changed*/
 }
 
 .lose a {
