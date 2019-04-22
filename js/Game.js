@@ -121,13 +121,15 @@
      document.querySelector('#overlay').style.display = 'initial';
      if(hasWon) {
        document.querySelector('#game-over-message')
-        .textContent = "You Win! Awesome!"
+        .textContent = "You Win! Awesome!";
+       document.querySelector('#game-over-message').style.color = '#000';
        document.querySelector('#overlay').classList.remove('start');
        document.querySelector('#overlay').classList.remove('lose');
        document.querySelector('#overlay').classList.add('win');
      } else {
        document.querySelector('#game-over-message')
-        .textContent = "You are out of lives..."
+        .textContent = "You are out of lives...";
+       document.querySelector('#game-over-message').style.color = '#000';
        document.querySelector('#overlay').classList.remove('start');
        document.querySelector('#overlay').classList.remove('win');
        document.querySelector('#overlay').classList.add('lose');
