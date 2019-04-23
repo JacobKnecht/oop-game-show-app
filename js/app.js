@@ -37,7 +37,7 @@
   * Callback function that handles keydown events for the onscreen keyboard
   * buttons; checks to determine which key was pressed and then passes the
   * corresponding onscreen keyboard button to the method that controls game
-  * logic  
+  * logic
   * @callback
   * @name keydownHandler
   * @param {Object} event - The keydown event that triggered the event listener
@@ -45,7 +45,8 @@
  function keydownHandler(event) {
    const buttons = document.querySelectorAll('#qwerty button');
    for(let button of buttons) {
-     if(button.textContent === event.key) {
+     if(button.textContent === event.key &&
+        !button.classList.contains('wrong')) {
        game.handleInteraction(button);
      }
    }
