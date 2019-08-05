@@ -62,6 +62,7 @@ their initial state and restoring the player's lives.
 
 The game is created and monitored in app.js, a file containing the following
 callback functions and event-listeners:
+
 3. document.querySelector('#btn__reset').addEventListener('click') : An
 event-listener for click events on the "Start Game" button. Creates
 and starts a new game.
