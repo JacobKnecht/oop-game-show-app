@@ -20,45 +20,45 @@ functionalities.
 Implementation - The project is implemented through two classes and their associated properties
 and methods:
 1. class Phrase : Represents a phrase to be used in-game. Contains the
-following properties and methods:
+following properties and methods:  
   * constructor(phrase) : Receives as a parameter a string to be used as
   the phrase, and converts said string to an all lowercase format.
-  Creates a Phrase object and initializes its properties.
-  * Phase.phrase : A property representing the phrase used in the game.
-  * Phrase.addPhraseToDisplay() : Generates the HTML to display the phrase used in the game.
+  Creates a Phrase object and initializes its properties.  
+  * Phase.phrase : A property representing the phrase used in the game.  
+  * Phrase.addPhraseToDisplay() : Generates the HTML to display the phrase used in the game.  
   * Phrase.checkLetter(letter) : Receives as a parameter a letter that
   represents the player's choice, and then checks to determine whether
   the active phrase contains the letter. Returns a Boolean signifying
-  whether the phrase contains the letter.
+  whether the phrase contains the letter.  
   * Phrase.showMatchedLetter(letter) : Receives as a parameter a letter
   that has been matched in the phrase and reveals that letter in the
-  phrase's display.
+  phrase's display.  
 2. class Game : Represents an active game. Contains the following properties
-and methods:
-  * constructor() : Creates a Game object and initializes it properties.
-  * Game.missed : A property representing the number of incorrect guesses.
-  * Game.phrases : A property representing an array of Phrase objects containing the phrases to be used in the game.
-  * Game.activePhrase: A property representing the phrase being displayed in the game.
-  * Game.startGame() : Starts a game by hiding the start screen, selecting a random phrase, and adding that phrase to the display.
-  * Game.getRandomPhrase() : Returns a randomly-selected phrase from the phrases stored in the Game.phrases property.
+and methods:  
+  * constructor() : Creates a Game object and initializes it properties.  
+  * Game.missed : A property representing the number of incorrect guesses.  
+  * Game.phrases : A property representing an array of Phrase objects containing the phrases to be used in the game.  
+  * Game.activePhrase: A property representing the phrase being displayed in the game.  
+  * Game.startGame() : Starts a game by hiding the start screen, selecting a random phrase, and adding that phrase to the display.  
+  * Game.getRandomPhrase() : Returns a randomly-selected phrase from the phrases stored in the Game.phrases property.  
   * Game.handleInteraction(key) : Receives as a parameter one of the
   on-screen keyboard buttons that the player has selected and disables
   it. It then removes a life from the player's total lives or reveals
   the corresponding letter in the phrase depending on whether the
-  letter was correctly guessed.
-  * Game.removeLife() : Removes one of the player's lives if they guess incorrectly.
+  letter was correctly guessed.  
+  * Game.removeLife() : Removes one of the player's lives if they guess incorrectly.  
   * Game.checkForWin() : Determines whether the player has won the game
   by checking to see if they have revealed all of the letters in the
   phrase. Returns a Boolean value signifying whether there are any
-  more hidden letters in the phrase.
+  more hidden letters in the phrase.  
   * Game.gameOver(hasWon = false) : Ends the game. Receives as a
   parameter a Boolean value signifying whether the player has won the
   game. If they have, the settings for a win state are generated; if
   the player did not win then the settings for a lose state are
-  generated.
+  generated.  
   * Game.resetGameBoard() : Resets the game board by removing the old
   phrase from the display, restoring the on-screen keyboard buttons to
-  their initial state and restoring the player's lives.
+  their initial state and restoring the player's lives.  
 
 The game is created and monitored in app.js, a file containing the following
 callback functions and event-listeners:
